@@ -1,0 +1,352 @@
+/* Styles généraux */
+@font-face {
+    font-family: 'Age';
+    src: url('age-webfont.woff2') format('woff2'),
+         url('age-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Age', sans-serif;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.menu-container ul li {
+    padding: 10px;
+}
+
+.menu-container ul li a {
+    font-size: 25px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.menu-container ul li a:hover {
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.menu-container ul .accueil a {
+    color: orange;
+}
+
+.menu-container ul .services a {
+    color: greenyellow;
+}
+
+.menu-container ul .contact a {
+    color: violet;
+}
+.menu-container ul .cssmaster a {
+    color: mediumaquamarine;
+}
+.menu-container ul li a span {
+    color: darkred;
+}
+
+/* Styles pour l'icône du menu burger */
+.burger-menu {
+    cursor: pointer;
+    display: none; /* Masqué par défaut sur les écrans plus larges */
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s; /* Animation de transition pour les barres du burger */
+}
+
+/* Styles pour la liste de navigation */
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Styles spécifiques pour les écrans plus petits (moins de 600px) */
+@media only screen and (max-width: 600px) {
+    .burger-menu {
+        display: block; /* Affiché sur les écrans plus petits */
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0 ;
+        background-color: #333;
+        width: 100%;
+        
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .menu-container ul{
+        align-items: center;
+    }
+
+    .menu-container ul li {
+        padding: 10px;
+    }
+
+    .menu-container ul li a:hover {
+        color: white;
+        transition: 0.3s ease-in-out;
+    }
+}
+
+body.error {
+    animation: multicolorBlink 5s infinite; /* Animation multicolore du fond en cas d'erreur */
+}
+
+@keyframes multicolorBlink {
+    0% {
+        background-color: #ff0000; /* Rouge */
+    }
+    25% {
+        background-color: #00ff00; /* Vert */
+    }
+    50% {
+        background-color: #0000ff; /* Bleu */
+    }
+    75% {
+        background-color: #ffff00; /* Jaune */
+    }
+    100% {
+        background-color: #ff00ff; /* Magenta */
+    }
+}
+
+.error {
+    color: red;
+    animation: blink 0.6s infinite; /* Animation pour faire clignoter en rouge */
+}
+
+.error-input {
+    border: 1px solid red;
+    background-color: red;
+    color: blue; /* Couleur du texte en bleu */
+    animation: blink 0.6s infinite; /* Animation pour faire clignoter en rouge */
+}
+
+@keyframes blink {
+    50% {
+        background-color: red; /* Changement de couleur à mi-chemin de l'animation */
+        color: blue; /* Changement de couleur du texte à mi-chemin de l'animation */
+    }
+}
+
+.inf-perso {
+    text-decoration: none;
+    border: none;
+    background: darkgray;
+    border-radius: 10px;
+    color: darkblue;
+}
+
+.inf-perso input {
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 0 15px;
+}
+.autre-info {
+    text-decoration: none;
+    border: none;
+    background: darkgray;
+    border-radius: 10px;
+    color: darkblue;
+}
+
+.autre-info input {
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 0 15px;
+}
+.autre-info textarea {
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 0 15px;
+}
+.autre-info select {
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 0 15px;
+}
+
+.sendbutton {
+    margin: 15px;
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    background: darkblue;
+    color: darkgray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sendbutton:hover {
+    background: darkgray;
+    color: darkblue;
+}
+
+body {
+    font-family: 'Age', sans-serif;
+    background-color: #f0f0f0;
+    color: #333333;
+}
+
+header {
+    padding: 20px;
+    background-color: #d6d6d6;
+    color: #3a3838;
+    text-align: center;
+    border-radius: 5vw;
+}
+
+section{
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.bienvenue {
+    text-align: center;
+}
+
+
+button{
+    border-radius: 0.7 vw;
+    border-color: violet;
+    background-color: red;
+    cursor: pointer;
+    padding: 10px;
+}
+
+button:hover {
+    background: white;
+}
+
+img{
+    border-radius: 15px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode header {
+    background-color: #262626;
+    color: white;
+
+}
+
+.dark-mode section{
+    background-color: #262626;
+    color: white;
+}
+
+.dark-mode button{
+    border-color: gray;
+    background-color: black;  
+    color: white;
+}
+
+.dark-mode .inf-perso {
+    color: darkgray;
+    background: darkblue;
+}
+.dark-mode .autre-info {
+    color: darkgray;
+    background: darkblue;
+}
+
+.dark-mode .swiper {
+    background-color: darkblue;
+    border: 0.3vw solid darkgray;
+    background: darkblue;
+    color: darkgray;
+}
+
+.dark-mode swiper-slide {
+    color: darkgray;
+    background: darkblue;
+}
+
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: 'Age' sans-serif;
+  font-size: 20px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

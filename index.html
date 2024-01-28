@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Document</title>
+</head>
+<body id="bodyall">
+    <div class="menu-container">
+        <!-- Icone du menu burger -->
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    
+        <!-- Liste des liens de navigation -->
+        <ul class="nav-menu">
+            <li class="accueil"><a href="#">Accueil</a></li>
+            <li class="services"><a href="#">Services</a></li>
+            <li class="contact"><a href="#">Contact</a></li>
+            <li class="cssmaster"><a href="#"><span>CSS</span>Master</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <h1>USSR FAN</h1>
+        <button id="buttondarkmode">Click pour voir le mode sombre !</button>
+    </header>
+
+    <section class="bienvenue">
+        <h2>Bienvenue sur mon site !</h2>
+        <p>Compte fan ♥ Joseph</p>
+    </section>
+
+    <section>
+        <h2>URSS Flag</h2>
+        <img src="Renault Megane.jpg" alt="USSR">
+        <img src="radis.webp" alt="USSR">
+    </section>
+
+    </head>
+    
+    <body>
+    
+      <swiper-container class="mySwiper" keyboard="true" space-between="30" pagination="true" pagination-clickable="true"
+        navigation="true">
+        <swiper-slide><img src="USSR Flag.png" alt=""></swiper-slide>
+        <swiper-slide><img src="Renault Megane.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="radis.webp" alt=""></swiper-slide>
+      </swiper-container>
+
+    <form id="monFormulaire" action="" method="">
+        <fieldset class="inf-perso">
+            <legend>Informations personnelles</legend>
+            <!-- Champ de texte simple -->
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" placeholder="Nom" required>
+    
+            <!-- Champ de texte pour l'e-mail -->
+            <label for="email">E-mail :</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+    
+            <!-- Champ de texte pour le mot de passe -->
+            <label for="motDePasse">Mot de passe :</label>
+            <input type="password" id="motDePasse" name="motDePasse" placeholder="Mot de passe" required>
+            <!-- Affiche un message d'erreur pour le mot de passe -->
+            <p id="motDePasseError" class="error"></p>
+        </fieldset>
+    
+        <fieldset class="autre-info">
+            <legend>Autres informations</legend>
+            <!-- Zone de texte -->
+            <label for="commentaire">Commentaire :</label>
+            <textarea id="commentaire" name="commentaire" rows="4" cols="50" placeholder="Autres commentaires..."></textarea>
+    
+            <!-- Case à cocher -->
+            <input type="checkbox" id="abonnement" name="abonnement" value="s'abonner">
+            <label for="abonnement">S'abonner à la newsletter</label>
+    
+            <!-- Boutons radio -->
+            <p>Genre :</p>
+            <input type="radio" id="homme" name="genre" value="homme">
+            <label for="homme">Homme</label>
+            <input type="radio" id="femme" name="genre" value="femme">
+            <label for="femme">Femme</label>
+            <input type="radio" id="non genré" name="genre" value="non genré">
+            <label for="non genré">Non genré</label>
+            <!-- Affiche un message d'erreur pour le genre -->
+            <p id="genreError" class="error"></p>
+    
+            <!-- Menu déroulant (select) -->
+            <label for="pays">Pays :</label>
+            <select id="pays" name="pays">
+                <option value="france">France</option>
+                <option value="espagne">Espagne</option>
+                <option value="italie">Italie</option>
+                <!-- Ajoutez d'autres options selon vos besoins -->
+            </select>
+        </fieldset>
+    
+        <!-- Input de type submit pour le bouton de soumission -->
+        <input type="button" value="Envoyer" id="bt" class="sendbutton">
+    </form>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+</html>
